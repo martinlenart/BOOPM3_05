@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace BOOPM3_05_01a
+namespace BOOPM3_05_01b
 {
 	public enum PlayingCardColor
 	{
@@ -17,26 +17,25 @@ namespace BOOPM3_05_01a
 		public PlayingCardValue Value { get; init; }
 
 		string BlackOrRed { get; }
-		string FaceOrValue { get; }
 		public string StringToPrint { get; }
 	}
 
 
 	class Program
 	{
-        static void Main(string[] args)
-        {
-			// As I only have an interface I cannot create an instance, I use null instead
-			IPlayingCard card1 = null;			
-			IPlayingCard card2 = null;
+		static void Main(string[] args)
+		{
+			// Now I have an implementation and can make an instance
+			IPlayingCard card1 = new PlayingCard { Color = PlayingCardColor.Diamonds, Value = PlayingCardValue.Three }; 
+			IPlayingCard card2 = new PlayingCard { Color = PlayingCardColor.Spades, Value = PlayingCardValue.Five };
 
-			// But I can write my code and compile
+			// no change in code here, but now I can test run
 			CompareTwoCards(card1, card2);		
 		}
 
-		// My parameters are of type IPlayingCard
-		static void CompareTwoCards (IPlayingCard card1, IPlayingCard card2)
-        {
+		// no change in code here
+		static void CompareTwoCards(IPlayingCard card1, IPlayingCard card2)
+		{
 			if (card1.Value > card2.Value)
 				Console.WriteLine($"{card1.Value} beats {card2.Value}");
 			else if (card1.Value < card2.Value)

@@ -10,7 +10,11 @@ namespace BOOPM3_05_02
     {
         IWine[] Wines = null;
 
-        public WineCellar(IWine[] wines) => Wines = wines;
+        public WineCellar(IWine[] wines)
+        {
+            Wines = wines;
+        }
+
         public void ViewCellar()
         {
             foreach (var wine in Wines)

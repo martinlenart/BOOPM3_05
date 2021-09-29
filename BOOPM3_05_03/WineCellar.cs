@@ -4,13 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BOOPM3_05_01
+namespace BOOPM3_05_03
 {
     class WineCellar
     {
         IWine[] Wines = null;
 
-        public WineCellar(IWine[] wines) => Wines = wines;
+        public WineCellar(IWine[] wines)
+        {
+            Wines = wines;
+        }
         public void ViewCellar()
         {
             foreach (var wine in Wines)
