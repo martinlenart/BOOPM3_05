@@ -2,26 +2,6 @@
 
 namespace BOOPM3_05_01a
 {
-	public enum PlayingCardColor
-	{
-		Clubs = 0, Diamonds, Hearts, Spades         // Poker suit order, Spades highest
-	}
-	public enum PlayingCardValue
-	{
-		Two = 2, Three, Four, Five, Six, Seven, Eight, Nine, Ten,
-		Knight, Queen, King, Ace                // Poker Value order
-	}
-	interface IPlayingCard
-	{
-		public PlayingCardColor Color { get; init; }
-		public PlayingCardValue Value { get; init; }
-
-		string BlackOrRed { get; }
-		string FaceOrValue { get; }
-		public string StringToPrint { get; }
-	}
-
-
 	class Program
 	{
         static void Main(string[] args)

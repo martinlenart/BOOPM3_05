@@ -4,34 +4,6 @@ namespace BOOPM3_05_03
 {
     class Program
     {
-        //Implementation of IWine as a class
-        public class WineClass : IWine
-        {
-            public string Name { get; set; }
-            public int Year { get; set; }
-            public decimal Price { get; set; }
-            override public string ToString() => $"{nameof(Name)}: {Name}, {nameof(Year)}: {Year}, {nameof(Price)}: {Price:N2}";
-
-            public WineClass(string name, int year, decimal price)
-            {
-                (Name, Year, Price) = (name, year, price);
-            }
-        }
-
-        //Implementation of IWine as a struct
-        public struct WineStruct : IWine
-        {
-            public string Name { get; set; }
-            public int Year { get; set; }
-            public decimal Price { get; set; }
-            override public string ToString() => $"{nameof(Name)}: {Name}, {nameof(Year)}: {Year}, {nameof(Price)}: {Price:N2}";
-
-            public WineStruct(string name, int year, decimal price):this()
-            {
-                (Name, Year, Price) = (name, year, price);
-            }
-        }
-
         static void Main(string[] args)
         {
             WineCellar wineCellar1 = new WineCellar(
