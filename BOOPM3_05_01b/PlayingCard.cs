@@ -8,7 +8,12 @@ namespace BOOPM3_05_01b
 {
     class PlayingCard : IPlayingCard
     {
-		public PlayingCardColor Color { get; init; }
+		PlayingCardColor _color;
+		public PlayingCardColor Color
+		{ 
+		  get {return _color; }
+		  init { _color = value; } 
+		}
 		public PlayingCardValue Value { get; init; }
 
 		public string BlackOrRed

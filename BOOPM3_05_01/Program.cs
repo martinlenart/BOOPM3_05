@@ -7,8 +7,13 @@ namespace BOOPM3_05_01a
         static void Main(string[] args)
         {
 			// As I only have an interface I cannot create an instance, I use null instead
-			IPlayingCard card1 = null;			
+			IPlayingCard card1 = null;
 			IPlayingCard card2 = null;
+
+			#region Using a Mockup implementation to test CompareTwoCards
+            //IPlayingCard card1 = new PlayingCard1();
+			//IPlayingCard card2 = new PlayingCard2();
+			#endregion
 
 			// But I can write my code and compile
 			CompareTwoCards(card1, card2);		

@@ -17,7 +17,11 @@ namespace BOOPM3_05_01a
 	}
 	interface IPlayingCard
 	{
+		/// <summary>
+		/// The color of a playing card.
+		/// </summary>
 		PlayingCardColor Color { get; init; }
+		
 		/// <summary>
 		/// The value Two - Ace of the card
 		/// </summary>
@@ -27,6 +31,10 @@ namespace BOOPM3_05_01a
 		/// Returns a string containing "Red" for Hearts and Diamonds, otherwise "Black"
 		/// </summary>
 		string BlackOrRed { get; }
+
+		/// <summary>
+		/// Genererates the string to print - should be better ToString();
+		/// </summary>
 		public string StringToPrint { get; }
 	}
 }
